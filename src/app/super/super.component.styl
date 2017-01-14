@@ -1,0 +1,58 @@
+$header-background-color = #F5F5F5
+$header-box-shadow = 2px 3px 5px rgba(0, 0, 0, 0.15), 0px 0px 3px rgba(0, 0, 0, 0.1)
+$header-font-color = #37474f
+
+:host
+    display block
+    text-align center
+    background-color $header-color
+    box-shadow $header-box-shadow
+    padding 5px
+
+    h1
+        margin 0
+        font-size 90px
+        font-style normal
+        font-weight 400
+        color $header-font-color
+
+        span
+            transition color linear 0.1s
+
+    h3
+        margin 0
+        font-size 18px
+        font-style normal
+        font-weight 400
+        color $header-font-color
+        margin-left 50px
+        margin-top -10px
+
+    i
+        font-size 50px
+        margin 5px 5px 5px 8px
+        opacity 0.6
+        cursor pointer
+
+    @media screen and (max-width 1200px) and (min-width 650px)
+
+        h1
+            font-size 60px
+
+        h3
+            margin-left 33px
+            font-size 12px
+
+        i
+            font-size 40px
+
+    @media screen and (max-width 650px)
+
+        h1
+            font-size 40px
+
+        h3
+            display none
+
+        i
+            font-size 30px

@@ -1,0 +1,27 @@
+:host
+    display flex
+    justify-content center
+    overflow-y scroll
+
+    div
+        font-size 18px
+        background-color transparent
+        border none
+        flex 0 0 99%
+        text-align center
+        transition outline-color linear 0.2s
+        line-height 1.6
+        margin 10px
+
+    div:focus
+        outline none
+
+    @media screen and (max-width: 1200px) and (min-width: 650px)
+
+        div
+            font-size 12px
+
+    @media screen and (max-width: 650px)
+
+        div
+            font-size 10px
