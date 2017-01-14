@@ -6,11 +6,8 @@ import {RegexStore} from "../shared/store";
     selector: 'footer',
     styleUrls: ['footer.component.styl'],
     template: `
-    <i class="material-icons made">code</i>
-    <span class="with">with</span>
-    <i class="material-icons love">favorite</i>
-    <span class="by">by</span>
-    <a class="daniel" href="http://danielleone.com" [style.color]="theme">Daniel Leone</a>
+    <a class="daniel" href="http://danielleone.com">Daniel Leone</a>
+    <i class="material-icons code" [style.color]="theme">code</i>
     <a class="gitHub" href="https://github.com/DanielLeone/regex-design">GitHub</a>`
 })
 export class FooterComponent implements OnInit {
