@@ -29,3 +29,6 @@ Thumbs.db
 
 # Mercurial
 .hg
+
+# GAE KEY
+regex-design-f5d1e9618ad1.json
