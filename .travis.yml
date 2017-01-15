@@ -8,8 +8,10 @@ before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 before_deploy:
-- npm run-script deploy
+- npm build
 deploy:
-  provider: gae
-  keyfile: YOUR SERVICE ACCOUNT JSON FILE
-  project: regex-design
+    provider: gae
+    skip_cleanup: true
+    keyfile: regex-design-f5d1e9618ad1.json
+    default: true
+    project: regex-design
