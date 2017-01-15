@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import * as _ from 'lodash';
-const randomColor = require('randomColor');
+const randomColor = require('randomcolor');
 
 @Injectable()
 export class ColorFactoryService {
