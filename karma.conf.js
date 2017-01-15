@@ -38,7 +38,6 @@ module.exports = function (config) {
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['Chrome', 'ChromeCanary'],
-        // This is the new content for your travis-ci configuration test
         //  Custom launcher for Travis-CI
         customLaunchers: {
             Chrome_travis_ci: {
@@ -51,7 +50,6 @@ module.exports = function (config) {
 
     if (process.env.TRAVIS) {
         configuration.browsers = ['Chrome_travis_ci'];
-        configuration.singleRun = true;
     }
 
     config.set(configuration);
