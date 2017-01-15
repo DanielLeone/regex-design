@@ -1,6 +1,6 @@
 {
     "project": {
-        "version": "1.0.0-beta.19-3",
+        "version": "1.0.0",
         "name": "regex-design"
     },
     "apps": [
@@ -54,10 +54,10 @@
             "template": true
         },
         "spec": {
-            "class": false,
+            "class": true,
             "component": true,
             "directive": true,
-            "module": false,
+            "module": true,
             "pipe": true,
             "service": true
         }
