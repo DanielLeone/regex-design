@@ -54,10 +54,10 @@
             "template": true
         },
         "spec": {
-            "class": true,
+            "class": false,
             "component": true,
             "directive": true,
-            "module": true,
+            "module": false,
             "pipe": true,
             "service": true
         }
