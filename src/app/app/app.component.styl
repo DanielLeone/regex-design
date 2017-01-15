@@ -9,29 +9,16 @@
     flex-flow column nowrap
     justify-content flex-start
     align-items stretch
+    overflow-x hidden
 
     super
         order 1
         flex 0 1 auto
         height 100%
 
-    div
+    space
         order 2
         flex 1 0 50vh
-        display flex
-        flex-flow row nowrap
-
-        palette
-            order 1
-            flex 0 1 auto
-            width auto
-            height auto
-            max-width 500px
-
-        workbench
-            order 2
-            flex 2 1 0
-            height auto
 
     expression
         order 3
@@ -45,9 +32,3 @@
         order 5
         height 100%
         flex 0 1 auto
-
-//
-//@media screen and (max-width: 650px)
-//    div
-//        palette
-//            flex 0 1 0

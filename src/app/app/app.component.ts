@@ -4,10 +4,7 @@ import {Component} from "@angular/core";
     styleUrls: ['app.component.styl'],
     template: `
     <super></super>
-    <div>
-        <palette></palette>
-        <workbench></workbench>
-    </div>
+    <space></space>
     <expression></expression>
     <test></test>
     <footer></footer>

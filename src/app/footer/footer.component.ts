@@ -6,17 +6,17 @@ import {RegexStore} from "../shared/store";
     selector: 'footer',
     styleUrls: ['footer.component.styl'],
     template: `
-    <a class="daniel" href="http://danielleone.com">Daniel Leone</a>
-    <i class="material-icons code" [style.color]="theme">code</i>
-    <a class="gitHub" href="https://github.com/DanielLeone/regex-design">GitHub</a>`
+    <a class="daniel" [style.color]="colors[0]" href="http://danielleone.com">Daniel Leone</a>
+    <i class="material-icons code" [style.color]="colors[1]">code</i>
+    <a class="gitHub" [style.color]="colors[2]" href="https://github.com/DanielLeone/regex-design">GitHub</a>`
 })
 export class FooterComponent implements OnInit {
     
-    private theme: string = '#bbb';
+    private colors: string[] = ['#fff', '#fff', '#fff'];
     
     constructor(private store: RegexStore, private color: ColorFactoryService) {
         this.store.subscribe(() => {
-            this.theme = color.getColor(this.store.state.theme);
+            this.colors = color.getColors(this.store.state.theme, 3);
         });
     }
     

@@ -6,9 +6,7 @@ import {Chip} from "../shared/chip";
     selector: 'palette',
     styleUrls: ['palette.component.styl'],
     template: `
-    <input id="palette_toggle" type="checkbox">
-    <label for="palette_toggle"><i class="material-icons">chevron_right</i></label>
-    <div class="container"><chip *ngFor="let c of chips" [chip]="c"></chip></div>
+    <div><chip *ngFor="let c of chips" [chip]="c"></chip></div>
     `
 })
 export class PaletteComponent implements OnInit {
