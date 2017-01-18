@@ -12,5 +12,6 @@ before_deploy:
 - mkdir deploy
 - cp -a dist deploy/dist
 - cp -a app.yaml deploy
+- cp -a regex-design-f5d1e9618ad1.json deploy
 - cd deploy
 - gcloud app deploy --project regex-design --verbosity info --quiet --version 1
