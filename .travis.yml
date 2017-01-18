@@ -13,10 +13,4 @@ before_deploy:
 - cp -a dist deploy/dist
 - cp -a app.yaml deploy
 - cd deploy
-deploy:
-    provider: gae
-    skip_cleanup: true
-    keyfile: regex-design-f5d1e9618ad1.json
-    default: true
-    project: regex-design
-    on: dev
+- gcloud app deploy --project regex-design --verbosity info --quiet --version 1
