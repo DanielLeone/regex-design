@@ -9,6 +9,21 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_deploy:
 - npm run-script build
+- rm -rf node_modules
+- rm -rf src
+- rm -rf coverage
+- rm -rf e2e
+- rm .editorconfig
+- rm .gitignore
+- rm .hgignore
+- rm angular-cli.json
+- rm app_deploy.sh
+- rm karma.conf.sh
+- rm package.json
+- rm protractor.conf.js
+- rm README.md
+- rm regex-design-f5d1e9618ad1.json.enc
+- rm tslint.json
 deploy:
     provider: gae
     skip_cleanup: true

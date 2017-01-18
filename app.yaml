@@ -8,7 +8,3 @@ handlers:
 
 - url: /
   static_dir: dist/
-
-skip_files:
-- /(?:[^app.yaml]*)/gm
-- /(?:[^dist]*)/gm
