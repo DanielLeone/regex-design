@@ -9,6 +9,10 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_deploy:
 - npm run-script build
+- mkdir deploy
+- cp -a dist deploy/dist
+- cp -a app.yaml deploy
+- cd deploy
 deploy:
     provider: gae
     skip_cleanup: true
