@@ -9,9 +9,10 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 before_deploy:
 - npm run-script build
-- mkdir deploy
-- cp -a dist deploy/dist
-- cp -a app.yaml deploy
-- cp -a regex-design-f5d1e9618ad1.json deploy
-- cd deploy
-- gcloud app deploy --project regex-design --verbosity info --quiet --version 1
+deploy:
+    provider: gae
+    skip_cleanup: true
+    keyfile: regex-design-f5d1e9618ad1.json
+    default: true
+    project: regex-design
+    on: dev
