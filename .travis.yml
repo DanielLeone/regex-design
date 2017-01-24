@@ -1,6 +1,10 @@
 language: node_js
 node_js:
 - node
+branches:
+  only:
+  - master
+  - dev
 before_install:
 - openssl aes-256-cbc -K $encrypted_e38084c2971e_key -iv $encrypted_e38084c2971e_iv
   -in regex-design-f5d1e9618ad1.json.enc -out regex-design-f5d1e9618ad1.json -d
@@ -17,4 +21,4 @@ deploy:
     keyfile: regex-design-f5d1e9618ad1.json
     default: true
     project: regex-design
-    on: dev
+    on: master
