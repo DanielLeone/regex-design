@@ -8,16 +8,16 @@ import * as Clipboard from "clipboard";
     selector: 'expression',
     styleUrls: ['expression.component.styl'],
     template: `
+    <i id="clipper" data-clipboard-target="#expression" class="material-icons">content_copy</i>
     <span id="expression">{{ expression }}</span>
-    <i class="material-icons">content_copy</i>
     `
 })
 export class ExpressionComponent implements OnInit {
     
     private expression: String;
     
-    @HostBinding('attr.id') private id = 'clipper';
-    @HostBinding('attr.data-clipboard-target') private target = "#expression";
+    // @HostBinding('attr.id') private id = 'clipper';
+    // @HostBinding('attr.data-clipboard-target') private target = "#expression";
     
     private clipboard = new Clipboard('#clipper');
     

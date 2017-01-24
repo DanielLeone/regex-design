@@ -1,0 +1,60 @@
+:host
+    display flex
+    flex-flow row nowrap
+    min-width 1000px
+    height 100%
+
+    & *
+        transform translateX(0)
+        transition transform 0.2s linear
+        height auto
+
+    palette
+        flex 0 0 80vw
+        max-width 400px
+
+    workbench
+        flex 0 0 calc(100vw - 40px)
+
+    label
+        user-select none
+        display flex
+        justify-content center
+        align-items center
+        background-color #eee
+        cursor pointer
+
+        &::before
+            display block
+            width 40px
+            text-align center
+            transition transform 0.2s linear
+            content "chevron_left"
+
+    input
+        opacity 0
+        z-index -1
+        position absolute
+
+        &:not(:checked)
+            color: blue
+
+            & ~ label::before
+                transform rotate(180deg)
+
+            & ~ *
+                transform translateX(-400px)
+
+                @media screen and (max-width 500px)
+                    transform translateX(-80vw)
+
+    @media screen and (min-width 1000px)
+
+        label, input
+            display none !important
+
+        palette, workbench
+            flex 1 0 0
+
+        & *
+            transform translateX(0) !important

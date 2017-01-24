@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Bitter', serif;
+    font-family: 'Roboto', serif;
     min-height: 100vh;
 }
 
@@ -19,9 +19,17 @@ body div span.match {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: column nowrap;
 }
 
-.spinner {
+.splash h1 {
+    font-size: 10vw;
+    color: orangered;
+    text-shadow: 7px 7px 3px #efe1dc;
+    margin-bottom: 5px;
+}
+
+.splash .spinner {
     width: 150px;
     height: 150px;
     background: #eee;
@@ -31,7 +39,7 @@ body div span.match {
     display: inline-block;
 }
 
-.spinner:after, .spinner:before {
+.splash .spinner:after, .splash .spinner:before {
     content: "";
     display: block;
     width: 100px;
@@ -48,7 +56,7 @@ body div span.match {
     opacity: 0;
 }
 
-.spinner:after {
+.splash .spinner:after {
     -webkit-animation: pulse 2s linear 2.3s infinite;
     animation: pulse 2s linear 2.3s infinite;
 }
@@ -78,4 +86,3 @@ body div span.match {
         opacity: 0;
     }
 }
-

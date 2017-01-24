@@ -13,8 +13,8 @@ import {ChipFactoryService} from "./shared/services/chip-factory.service";
 import {RegexStore} from "./shared/store";
 import {ColorFactoryService} from "./shared/services/color-factory.service";
 import {SortablejsModule} from "angular-sortablejs";
-import {OptionsComponent} from "./options/options.component";
 import {FooterComponent} from "./footer/footer.component";
+import {SpaceComponent} from "./space/space.component";
 
 @NgModule({
     declarations: [
@@ -25,8 +25,8 @@ import {FooterComponent} from "./footer/footer.component";
         ExpressionComponent,
         PaletteComponent,
         TestComponent,
-        OptionsComponent,
-        FooterComponent
+        FooterComponent,
+        SpaceComponent
     ],
     imports: [
         BrowserModule,
