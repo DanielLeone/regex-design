@@ -1,4 +1,6 @@
 import {Component} from "@angular/core";
+import {RegexStore} from "../shared/store";
+import {ColorFactoryService} from "../shared/services/color-factory.service";
 @Component({
     selector: 'app-root',
     styleUrls: ['app.component.styl'],
@@ -11,4 +13,12 @@ import {Component} from "@angular/core";
     `
 })
 export class AppComponent {
+    private theme: string;
+    
+    constructor(private store: RegexStore, private color: ColorFactoryService) {
+        this.store.subscribe(() => {
+            this.theme = color.getColor(this.store.state.theme);
+            document.getElementById('color-theme-meta-tag').setAttribute("content", this.theme);
+        });
+    }
 }
