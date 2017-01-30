@@ -2,9 +2,18 @@ runtime: python27
 threadsafe: true
 
 handlers:
-- url: /
-  static_files: dist/index.html
-  upload: dist/index.html
+
+# LetsEncrypt handler
+- url: /\.well-known/acme-challenge/(.+)
+    static_files: letsencrypt/\1
+    upload: letsencrypt/(.+)
+    mime_type: text/plain
 
 - url: /
-  static_dir: dist/
+    static_files: dist/index.html
+    upload: dist/index.html
+    secure: always
+
+- url: /
+    static_dir: dist/
+    secure: always
