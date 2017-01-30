@@ -5,15 +5,15 @@ handlers:
 
 # LetsEncrypt handler
 - url: /\.well-known/acme-challenge/(.+)
-    upload: letsencrypt/(.+)
-    static_files: letsencrypt/\1
-    mime_type: text/plain
+  upload: letsencrypt/(.+)
+  static_files: letsencrypt/\1
+  mime_type: text/plain
 
 - url: /
-    static_files: dist/index.html
-    upload: dist/index.html
-    secure: always
+  static_files: dist/index.html
+  upload: dist/index.html
+  secure: always
 
 - url: /
-    static_dir: dist/
-    secure: always
+  static_dir: dist/
+  secure: always
