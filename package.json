@@ -40,7 +40,7 @@
         "@angular/compiler-cli": "^2.3.1",
         "@types/jasmine": "2.5.38",
         "@types/node": "^6.0.42",
-        "@types/lodash": "^4.14.37",
+        "@types/lodash": "4.14.50",
         "@types/clipboard": "^1.5.30",
         "angular-cli": "1.0.0-beta.21",
         "codelyzer": "~2.0.0-beta.1",
@@ -55,6 +55,8 @@
         "ts-node": "1.2.1",
         "tslint": "^4.3.0",
         "typescript": "2.1.4",
-        "awesome-typescript-loader": "3.0.0-beta.10"
+
+        "awesome-typescript-loader": "3.0.0-beta.10",
+        "extract-text-webpack-plugin": "2.0.0-beta.4"
     }
 }
